@@ -4,94 +4,96 @@ import {
   Github,
   Linkedin,
   Mail,
-  Palette,
   Rocket,
+  Smartphone,
 } from 'lucide-react';
 import './App.css';
 
 const profile = {
   name: 'Tu Nombre',
-  role: 'Desarrollador Web',
+  role: 'Desarrolladora .NET',
   photo: '/profile-placeholder.svg',
   intro:
-    'Desarrollador Full Stack apasionado por crear experiencias web modernas, funcionales y centradas en el usuario.',
+    'Especializada en crear aplicaciones web, móviles y backend con .NET, Blazor y .NET MAUI.',
   email: 'tu.email@example.com',
   github: 'https://github.com/tu-usuario',
   linkedin: 'https://www.linkedin.com/in/tu-usuario',
 };
 
 const aboutParagraphs = [
-  'Soy un desarrollador web con experiencia en la creación de aplicaciones modernas y escalables. Me apasiona aprender nuevas tecnologías y resolver problemas complejos de manera eficiente.',
-  'Mi enfoque se centra en escribir código limpio, mantenible y bien documentado, siempre buscando las mejores prácticas en el desarrollo de software.',
-  'Cuando no estoy programando, disfruto contribuir a proyectos de código abierto y mantenerme actualizado con las últimas tendencias en tecnología web.',
+  'Soy desarrolladora .NET con foco en la creación de soluciones modernas, mantenibles y orientadas a resolver necesidades reales de negocio.',
+  'Trabajo principalmente con C#, ASP.NET Core, Blazor y .NET MAUI, combinando interfaces cuidadas con arquitecturas claras y servicios robustos.',
+  'Me interesa construir aplicaciones que se sientan fluidas, confiables y fáciles de evolucionar, tanto en entornos web como móviles.',
 ];
 
 const strengths = [
   {
-    title: 'Desarrollo',
+    title: 'Backend .NET',
     description:
-      'Experiencia en desarrollo frontend y backend con tecnologías modernas.',
+      'Desarrollo de APIs, servicios y lógica de negocio con C#, ASP.NET Core y Entity Framework.',
     icon: Code2,
   },
   {
-    title: 'Diseño UI/UX',
+    title: 'Blazor',
     description:
-      'Creación de interfaces intuitivas y atractivas centradas en el usuario.',
-    icon: Palette,
+      'Construcción de interfaces web interactivas, modernas y reutilizables con componentes Razor.',
+    icon: Rocket,
   },
   {
-    title: 'Optimización',
+    title: '.NET MAUI',
     description:
-      'Mejora del rendimiento y la experiencia del usuario en aplicaciones web.',
-    icon: Rocket,
+      'Creación de experiencias móviles multiplataforma con patrones como MVVM y XAML.',
+    icon: Smartphone,
   },
 ];
 
 const projects = [
   {
-    title: 'E-commerce Platform',
+    title: 'Portal Administrativo Blazor',
     description:
-      'Plataforma de comercio electrónico completa con carrito de compras, pasarela de pago y panel de administración.',
+      'Panel web para gestionar usuarios, reportes y operaciones internas con componentes reutilizables y autenticación.',
     image:
       'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    codeUrl: 'https://github.com/tu-usuario/ecommerce-platform',
+    tags: ['Blazor', 'C#', 'ASP.NET Core', 'SQL Server'],
+    codeUrl: 'https://github.com/tu-usuario/portal-blazor',
     demoUrl: 'https://example.com',
   },
   {
-    title: 'Task Management App',
+    title: 'App Mobile .NET MAUI',
     description:
-      'Aplicación de gestión de tareas con colaboración en tiempo real y seguimiento de proyectos.',
+      'Aplicación móvil multiplataforma para seguimiento de tareas, sincronización de datos y experiencia offline.',
     image:
       'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80',
-    tags: ['TypeScript', 'React', 'Firebase', 'Tailwind'],
-    codeUrl: 'https://github.com/tu-usuario/task-management-app',
+    tags: ['.NET MAUI', 'C#', 'XAML', 'MVVM'],
+    codeUrl: 'https://github.com/tu-usuario/app-maui',
     demoUrl: 'https://example.com',
   },
   {
-    title: 'Portfolio CMS',
+    title: 'API de Gestión Empresarial',
     description:
-      'Sistema de gestión de contenido para portfolios creativos con editor visual y optimización SEO.',
+      'API REST para centralizar entidades, permisos y flujos de datos con arquitectura limpia y persistencia relacional.',
     image:
       'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80',
-    tags: ['Next.js', 'Prisma', 'PostgreSQL', 'TailwindCSS'],
-    codeUrl: 'https://github.com/tu-usuario/portfolio-cms',
+    tags: ['ASP.NET Core', 'EF Core', 'SQL Server', 'JWT'],
+    codeUrl: 'https://github.com/tu-usuario/api-gestion',
     demoUrl: 'https://example.com',
   },
 ];
 
 const skills = [
-  'React',
-  'TypeScript',
-  'JavaScript',
-  'Node.js',
-  'HTML',
-  'CSS',
-  'Vite',
-  'Git',
+  'C#',
+  '.NET',
+  'ASP.NET Core',
+  'Blazor',
+  '.NET MAUI',
+  'Entity Framework',
+  'SQL Server',
   'REST APIs',
-  'Responsive Design',
-  'UI/UX',
+  'Razor',
+  'XAML',
+  'MVVM',
+  'Git',
+  'Azure',
   'Testing',
 ];
 
@@ -202,7 +204,10 @@ function App() {
         <section className="section section-muted" id="habilidades">
           <div className="section-heading">
             <h2>Habilidades</h2>
-            <p>Tecnologías y prácticas que uso para construir productos web.</p>
+            <p>
+              Tecnologías y prácticas que uso para construir soluciones .NET
+              web, mobile y backend.
+            </p>
           </div>
           <div className="skills-panel">
             {skills.map((skill) => (
@@ -216,7 +221,7 @@ function App() {
             <h2>Contacto</h2>
             <p>
               Estoy disponible para nuevos proyectos, colaboraciones y
-              oportunidades.
+              oportunidades vinculadas al ecosistema .NET.
             </p>
           </div>
           <div className="contact-actions">
