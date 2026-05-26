@@ -113,36 +113,57 @@ function App() {
         </nav>
       </header>
 
-      <main>
+      <main id="contenido" tabIndex={-1}>
         <section className="hero section" id="inicio">
-          <img
-            className="profile-photo"
-            src={profile.photo}
-            alt={`Foto de ${profile.name}`}
-          />
-          <h1>
-            Hola, soy {profile.name}
-            <span>{profile.role}</span>
-          </h1>
-          <p>{profile.intro}</p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#proyectos">
-              Ver Proyectos
-            </a>
-            <a className="button button-secondary" href="#contacto">
-              Contactar
-            </a>
-          </div>
-          <div className="social-links" aria-label="Redes sociales">
-            <a href={profile.github} aria-label="GitHub">
-              <Github size={24} strokeWidth={2} />
-            </a>
-            <a href={profile.linkedin} aria-label="LinkedIn">
-              <Linkedin size={24} strokeWidth={2} />
-            </a>
-            <a href={`mailto:${profile.email}`} aria-label="Email">
-              <Mail size={24} strokeWidth={2} />
-            </a>
+          <div className="hero-inner">
+            <div className="hero-copy">
+              <h1 aria-label={`Hola, soy ${profile.name}, ${profile.role}`}>
+                Hola, soy {profile.name}
+                <span>{profile.role}</span>
+              </h1>
+              <p>{profile.intro}</p>
+              <div className="hero-actions">
+                <a className="button button-primary" href="#proyectos">
+                  Ver Proyectos
+                </a>
+                <a className="button button-secondary" href="#contacto">
+                  Contactar
+                </a>
+              </div>
+              <div className="social-links" aria-label="Redes sociales">
+                <a href={profile.github} aria-label={`GitHub de ${profile.name}`}>
+                  <Github size={24} strokeWidth={2} />
+                </a>
+                <a
+                  href={profile.linkedin}
+                  aria-label={`LinkedIn de ${profile.name}`}
+                >
+                  <Linkedin size={24} strokeWidth={2} />
+                </a>
+                <a
+                  href={`mailto:${profile.email}`}
+                  aria-label={`Enviar email a ${profile.name}`}
+                >
+                  <Mail size={24} strokeWidth={2} />
+                </a>
+              </div>
+            </div>
+            <div className="hero-portrait">
+              <img
+                className="profile-photo"
+                src={profile.photo}
+                alt={`Foto de ${profile.name}`}
+              />
+              <span className="orbit-badge" aria-hidden="true">
+                .NET + BLAZOR
+              </span>
+              <span className="sparkle sparkle-one" aria-hidden="true">
+                *
+              </span>
+              <span className="sparkle sparkle-two" aria-hidden="true">
+                +
+              </span>
+            </div>
           </div>
         </section>
 
@@ -186,11 +207,17 @@ function App() {
                     ))}
                   </div>
                   <div className="project-links">
-                    <a href={project.codeUrl}>
+                    <a
+                      href={project.codeUrl}
+                      aria-label={`Ver código de ${project.title}`}
+                    >
                       <Github size={18} />
                       Código
                     </a>
-                    <a href={project.demoUrl}>
+                    <a
+                      href={project.demoUrl}
+                      aria-label={`Ver demo de ${project.title}`}
+                    >
                       <ExternalLink size={18} />
                       Demo
                     </a>
