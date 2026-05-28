@@ -1,0 +1,159 @@
+@media (max-width: 980px) {
+  .app {
+    width: min(100% - 28px, 760px);
+    margin: 24px auto;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 22px;
+  }
+
+  .main-nav {
+    width: 100%;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .main-nav a {
+    flex: 0 0 auto;
+  }
+
+  .section {
+    scroll-margin-top: 132px;
+    padding: 72px 24px;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-inner,
+  .about-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    gap: 48px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero p,
+  .hero h1 {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-actions,
+  .social-links {
+    justify-content: center;
+  }
+
+  .hero-portrait {
+    width: min(100%, 430px);
+    margin: 0 auto;
+  }
+
+  .project-content p {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .app {
+    width: 100%;
+    margin: 0;
+    border-right: 0;
+    border-left: 0;
+    box-shadow: none;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .brand {
+    font-size: 24px;
+  }
+
+  .section {
+    scroll-margin-top: 24px;
+    padding: 64px 20px;
+  }
+
+  .section::before,
+  .section::after {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .hero-portrait {
+    min-height: 330px;
+    border-radius: 46% 46% 8px 8px;
+  }
+
+  .profile-photo {
+    width: 164px;
+    height: 164px;
+  }
+
+  .orbit-badge {
+    left: 8px;
+    width: 78px;
+    height: 78px;
+    font-size: 10px;
+  }
+
+  .about-copy,
+  .project-content,
+  .strength-card,
+  .skills-panel {
+    padding: 22px;
+  }
+
+  .strength-card {
+    grid-template-columns: 1fr;
+  }
+
+  .strength-card svg {
+    grid-row: auto;
+    margin-bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .button:hover,
+  .project-card:hover {
+    transform: none;
+  }
+}

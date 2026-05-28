@@ -1,0 +1,19 @@
+:root {
+  --color-ink: #19171d;
+  --color-text: #3a3442;
+  --color-text-strong: #282431;
+  --color-text-muted: #342e3c;
+  --color-surface: #ffffff;
+  --color-page: #efffe0;
+  --color-lilac: #deddfb;
+  --color-lilac-soft: #f3f0ff;
+  --color-mint: #f0ffe3;
+  --color-lime: #c9ff68;
+  --color-pink: #f8d7f1;
+  --color-sky: #dff0ff;
+  --color-focus: #6b5cff;
+  --shadow-app: 12px 12px 0 #d8f3c8;
+  --shadow-card: 7px 7px 0 var(--color-ink);
+  --shadow-button: 4px 4px 0 var(--color-ink);
+  --border-strong: 2px solid var(--color-ink);
+}
