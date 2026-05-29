@@ -4,7 +4,7 @@ import type { Profile, Project, Strength } from '../types/portfolio';
 export const profile: Profile = {
   name: 'Julieta Albaya',
   role: 'Desarrolladora .NET',
-  photo: '/profile-placeholder.svg',
+  photo: `${import.meta.env.BASE_URL}profile-placeholder.svg`,
   intro:
     'Especializada en crear aplicaciones web, móviles y backend con .NET, Blazor y .NET MAUI.',
   email: 'julietaalbaya@gmail.com',
